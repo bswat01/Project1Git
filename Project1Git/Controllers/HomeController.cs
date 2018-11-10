@@ -13,6 +13,10 @@ namespace Project1Git.Controllers
         {
             return View();
         }
+        public ActionResult Missions()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {
