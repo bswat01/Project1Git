@@ -9,6 +9,8 @@ namespace Project1Git.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+
+            //comment
         public ActionResult Index()
         {
             return View();
