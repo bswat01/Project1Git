@@ -10,7 +10,6 @@ namespace Project1Git.Controllers
     {
         // GET: Home
 
-            //comment
         public ActionResult Index()
         {
             return View();
