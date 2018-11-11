@@ -1,0 +1,27 @@
+﻿@model Project1Git.Models.MissionName
+@{
+    ViewBag.Title = "Missions";
+}
+
+<h2>Missions</h2>
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>
+        Mission Selection
+    </li>
+</ul>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    @Html.DropDownListFor(x => x.Mission_Name, new[] {
+        new SelectListItem()
+            {Text = "California Long Beach", Value = "LongBeach"},
+        new SelectListItem()
+            {Text = "Canada Calgary", Value = "Calgary"},
+        new SelectListItem()
+            {Text = "France Lyon", Value = "Lyon"} }, "Select Mission:")
+
+    <input type="submit" value="Submit" />
+}

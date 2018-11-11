@@ -1,0 +1,61 @@
+﻿@model Project1Git.Models.MissionName
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Missions", "Missions", "FAQ")</li>
+    <li>
+        Frequently Asked Questions
+    </li>
+</ul>
+<div class="row">
+    @{
+        if (Model.Mission_Name == "LongBeach")
+        {
+            <div class="col-lg-5">
+                <p>@Html.Raw(ViewBag.California)</p>
+                <img src="@ViewBag.CaliforniaFlag" class="center"/>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+            <div class="col-lg-5">
+                Californa Long Beach FAQ's:'
+            </div>
+        }
+        else if (Model.Mission_Name == "Lyon")
+        {
+            <div class="col-lg-5">
+                <p>@Html.Raw(ViewBag.France)</p>
+                <img src="@ViewBag.FranceFlag" class="center" />
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+            <div class="col-lg-5">
+                Californa Long Beach FAQ's:'
+            </div>
+
+        }
+        else if (Model.Mission_Name == "Calgary")
+        {
+            <div class="col-lg-5">
+                <p>@Html.Raw(ViewBag.Canada)</p>
+                <img src="@ViewBag.CanadaFlag" class="center" />
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+            <div class="col-lg-5">
+                Californa Long Beach FAQ's:'
+            </div>
+        }
+        else
+        {
+            <p>No mission selected</p>
+        }
+    }
+</div>
