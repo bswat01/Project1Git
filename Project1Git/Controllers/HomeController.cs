@@ -10,10 +10,11 @@ namespace Project1Git.Controllers
     {
         // GET: Home
         //JAXON KNOWS HOW TO USE GIT!!!
+        //KEN TRIED
         //comment
         public ActionResult Index()
         {
-            return View();
+            return View(); 
         }
 
         public ActionResult About()

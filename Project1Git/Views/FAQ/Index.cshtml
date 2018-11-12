@@ -17,7 +17,7 @@
         {
             <div class="col-lg-5">
                 <p>@Html.Raw(ViewBag.California)</p>
-                <img src="@ViewBag.CaliforniaFlag" class="center"/>
+                <img src="@ViewBag.CaliforniaFlag" class="center" />
             </div>
             <div class="col-lg-2">
 
@@ -25,6 +25,7 @@
             <div class="col-lg-5">
                 Californa Long Beach Mission FAQ's:
             </div>
+
         }
         else if (Model.Mission_Name == "Lyon")
         {
@@ -58,4 +59,173 @@
             <p>No mission selected</p>
         }
     }
+</div>
+<br />
+<br />
+<br />
+@{
+    if (Model.Mission_Name == "LongBeach")
+    {
+        <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h5><strong>What is something most missionaries wish they had brought with them?</strong></h5>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-5">
+                    <p>A lot of missionaries wish they had brought a lot of sunscreen and more hot weather appropriate apparel.</p>
+                </div>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
+
+                <input type="reset" value="Reply" />
+            }
+
+        </div>
+        <br />
+        <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-5">
+                    <p>On average most companionships were fed around two times per week by members of the ward in which they were currently serving.</p>
+                </div>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
+
+                <input type="reset" value="Reply" />
+            }
+
+        </div>
+    }
+    else if (Model.Mission_Name == "Lyon")
+    {
+        <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h5><strong>What is something most missionaries wish they had brought with them?</strong></h5>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-5">
+                    <p>A lot of missionaries wish they had brought an umbrella and a pair of rain boots.</p>
+                </div>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
+
+                <input type="reset" value="Reply" />
+            }
+
+        </div>
+        <br />
+        <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-5">
+                    <p>On average most companionships were fed around two times per week by members of the ward in which they were currently serving.</p>
+                </div>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
+
+                <input type="reset" value="Reply" />
+            }
+
+        </div>
+    }
+    else if (Model.Mission_Name == "Calgary")
+    {
+        <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h5><strong>What is something most missionaries wish they had brought with them?</strong></h5>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-5">
+                    <p>A lot of missionaries wish they had brought thick winter coat and a pair of mittens.</p>
+                </div>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
+
+                <input type="reset" value="Reply" />
+            }
+
+        </div>
+        <br />
+        <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-5">
+                    <p>On average most companionships were fed around two times per week by members of the ward in which they were currently serving.</p>
+                </div>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
+
+                <input type="reset" value="Reply" />
+            }
+
+        </div>
+    }
+    else
+    {
+
+    }
+
+
+}
+
+<br />
+<br />
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        <p align="justify"><strong>Ask your own question:</strong> @Html.TextBox("Question Textbox", "Write your question here...")</p>
+
+        <input type="reset" value="Submit Question" />
+    }
+
 </div>
