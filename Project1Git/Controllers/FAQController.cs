@@ -26,13 +26,13 @@ namespace Project1Git.Controllers
                     "Mission Language: English <br>" +
                     "Mission Climate: Mediterranean <br>" +
                     "Mission Dominate Religion: Christian <br>";
-                ViewBag.Canada = "Mission name: Calgary, Canada" +
+                ViewBag.Canada = "Mission name: Calgary, Canada <br>" +
                     "Mission President's Name: Stephen A. Keung <br>" +
                     "Mission Address: 7044 Farrell Rd SE, Calgary, AB T2H 0T2, Canada <br>" +
                     "Mission Language: English <br>" +
                     "Mission Climate: humid continental<br>" +
                     "Mission Dominate Religion: Christian <br>";
-                ViewBag.France = "Mission name: Lyon, France" +
+                ViewBag.France = "Mission name: Lyon, France <br>" +
                     "Mission President's Name: Jarom Barnes <br>" +
                     "Mission Address: Lyon Business Centre, 59 rue de l’Abondance, 69003 Lyon, France <br>" +
                     "Mission Language: French <br>" +
