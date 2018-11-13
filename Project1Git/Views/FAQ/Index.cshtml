@@ -17,7 +17,7 @@
         {
             <div class="col-lg-5">
                 <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
-                    <p style="margin-top: 50px;">@Html.Raw(ViewBag.California)</p>
+                    <p style="margin-top: 15px;">@Html.Raw(ViewBag.California)</p>
                 </div>
             </div>
             <div class="col-lg-1">
@@ -31,28 +31,30 @@
         else if (Model.Mission_Name == "Lyon")
         {
             <div class="col-lg-5">
-                <p>@Html.Raw(ViewBag.France)</p>
-                <img src="@ViewBag.FranceFlag" class="center" />
+                <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
+                    <p style="margin-top: 15px;">@Html.Raw(ViewBag.France)</p>
+                </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-1">
 
             </div>
-            <div class="col-lg-5">
-                France Lyon Mission FAQ's:
+            <div class="col-lg-6">
+                <img src="@ViewBag.FranceFlag" class="center" style="width: 80%; border-radius: 25px; height: 250px;" />
             </div>
 
         }
         else if (Model.Mission_Name == "Calgary")
         {
             <div class="col-lg-5">
-                <p>@Html.Raw(ViewBag.Canada)</p>
-                <img src="@ViewBag.CanadaFlag" class="center" />
+                <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
+                    <p style="margin-top: 15px;">@Html.Raw(ViewBag.Canada)</p>
+                </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-1">
 
             </div>
-            <div class="col-lg-5">
-                Calgary Canada Mission FAQ's:
+            <div class="col-lg-6">
+                <img src="@ViewBag.CanadaFlag" class="center" style="width: 80%; border-radius: 25px; height: 250px;" />
             </div>
         }
         else
@@ -76,7 +78,6 @@
                         @Html.AntiForgeryToken()
                         @Html.ValidationSummary(false, "", new { @class = "text-danger" })
                         @Html.TextBox("Question Textbox", "Write your answer here...")
-
                         <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
                 </div>
@@ -89,31 +90,29 @@
                     <p>A lot of missionaries wish they had brought a lot of sunscreen and more hot weather appropriate apparel.</p>
                 </div>
             </div>
-            
-
         </div>
         <br />
         <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
             <div class="row">
                 <div class="col-lg-5">
                     <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        @Html.TextBox("Question Textbox", "Write your answer here...")
+                        <input type="reset" value="Reply" class="btn btn-sm btn-success" />
+                    }
                 </div>
                 <div class="col-lg-2">
 
                 </div>
                 <div class="col-lg-5">
+                    <h5><strong>Answers:</strong></h5>
+                    <br />
                     <p>On average most companionships were fed around two times per week by members of the ward in which they were currently serving.</p>
                 </div>
             </div>
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
-
-                <input type="reset" value="Reply" />
-            }
-
         </div>
     }
     else if (Model.Mission_Name == "Lyon")
@@ -122,22 +121,24 @@
             <div class="row">
                 <div class="col-lg-5">
                     <h5><strong>What is something most missionaries wish they had brought with them?</strong></h5>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        @Html.TextBox("Question Textbox", "Write your answer here...")
+                        <input type="reset" value="Reply" class="btn btn-sm btn-success" />
+                    }
                 </div>
                 <div class="col-lg-2">
 
                 </div>
                 <div class="col-lg-5">
+                    <h5><strong>Answers:</strong></h5>
+                    <br />
                     <p>A lot of missionaries wish they had brought an umbrella and a pair of rain boots.</p>
                 </div>
             </div>
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
 
-                <input type="reset" value="Reply" />
-            }
 
         </div>
         <br />
@@ -145,22 +146,24 @@
             <div class="row">
                 <div class="col-lg-5">
                     <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        @Html.TextBox("Question Textbox", "Write your answer here...")
+                        <input type="reset" value="Reply" class="btn btn-sm btn-success"/>
+                    }
                 </div>
                 <div class="col-lg-2">
 
                 </div>
                 <div class="col-lg-5">
+                    <h5><strong>Answers:</strong></h5>
+                    <br />
                     <p>On average most companionships were fed around two times per week by members of the ward in which they were currently serving.</p>
                 </div>
             </div>
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
 
-                <input type="reset" value="Reply" />
-            }
 
         </div>
     }
@@ -225,11 +228,14 @@
 <div class="row">
     @using (Html.BeginForm())
     {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-        <p align="justify"><strong>Ask your own question:</strong> @Html.TextBox("Question Textbox", "Write your question here...")</p>
-
-        <input type="reset" value="Submit Question" />
-    }
-
+        <div class="col-lg-6">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <p align="justify"><strong>Ask your own question:</strong> @Html.TextBox("Question Textbox", "Write your question here...")</p>
+        </div>
+        <div class="col-lg-1">
+            <input type="reset" value="Submit Question" class="btn btn-lg btn-success" style="margin-top: 10px;" />
+        </div>
+        }
 </div>
+        
