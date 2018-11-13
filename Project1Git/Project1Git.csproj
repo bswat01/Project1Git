@@ -99,6 +99,7 @@
     <Content Include="Content\Images\Language.jpg" />
     <Content Include="Content\Images\Missionaries.jpg" />
     <Content Include="Content\Images\Packages.jpg" />
+    <Content Include="Content\Images\ProvoCityCenter.png" />
     <Content Include="Content\Images\Scriptures.jpg" />
     <Content Include="Content\Images\Suit.jpg" />
     <Content Include="Content\Images\temple.jpg" />
