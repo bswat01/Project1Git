@@ -3,7 +3,8 @@
     ViewBag.Title = "About";
 }
 
-<h2 class="center">About</h2>
+<h1 class="center" style="font-size:50px">About</h1>
+<h5 class="center"><i>"After all that has been said, the greatest and most important duty is to preach the gospel." <br />- </i>Joseph Smith</h5>
 <ul class="breadcrumb">
     <li>@Html.ActionLink("Home", "Index", "Home")</li>
     <li>
@@ -17,26 +18,32 @@ The About view should display “made up” information about the company that w
 <div class="jumbotron">
     <div class="row">
         <div class="col-lg-5 center">
-            <h3>
-                What we do
-            </h3>
-            <p>
-                We bring returned missionaries and future missionaries together <br />
+            <h2>
+                <u>What do we do?</u>
+            </h2>
+            <p style="justify-content">
+                We bring returned missionaries <br />and future missionaries together <br />
                 to further the work of salvation. <br />
 
             </p>
+            <img src="~/Content/Images/missionaryTeaching.jpg" style="height:250px; width:350px" />
         </div>
         <div class="col-lg-2">
 
         </div>
         <div class="col-lg-5 center">
-            <h3>
-                How it works
-            </h3>
+            <h2>
+                <u>How does it work?</u>
+            </h2>
             <p>
-                Future missionaries can ask questions about their missions <br />
-                and returned missionaries will answer.
+                Future missionaries can ask<br /> questions about being a missionary <br />
+                to returned missionaries.
             </p>
+
+            <img src="~/Content/Images/missionaryEmail.jpg" style="height:250px; width:350px"/>
         </div>
     </div>
 </div>
+<br />
+
+
