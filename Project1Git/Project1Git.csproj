@@ -98,6 +98,9 @@
     <Content Include="Content\Images\France.png" />
     <Content Include="Content\Images\Language.jpg" />
     <Content Include="Content\Images\Missionaries.jpg" />
+    <Content Include="Content\Images\missionaryEmail.jpg" />
+    <Content Include="Content\Images\missionaryTeaching.jpg" />
+    <Content Include="Content\Images\newMissionaries.JPG" />
     <Content Include="Content\Images\Packages.jpg" />
     <Content Include="Content\Images\ProvoCityCenter.png" />
     <Content Include="Content\Images\Scriptures.jpg" />
