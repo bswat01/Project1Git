@@ -173,61 +173,61 @@
             <div class="row">
                 <div class="col-lg-5">
                     <h5><strong>What is something most missionaries wish they had brought with them?</strong></h5>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        @Html.TextBox("Question Textbox", "Write your answer here...")
+                        <input type="reset" value="Reply" class="btn btn-sm btn-success" />
+                    }
                 </div>
                 <div class="col-lg-2">
 
                 </div>
                 <div class="col-lg-5">
+                    <h5><strong>Answers:</strong></h5>
+                    <br />
                     <p>A lot of missionaries wish they had brought thick winter coat and a pair of mittens.</p>
                 </div>
             </div>
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
-
-                <input type="reset" value="Reply" />
-            }
-
         </div>
         <br />
         <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
             <div class="row">
                 <div class="col-lg-5">
                     <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        @Html.TextBox("Question Textbox", "Write your answer here...")
+                        <input type="reset" value="Reply" class="btn btn-sm btn-success" />
+                    }
                 </div>
                 <div class="col-lg-2">
 
                 </div>
                 <div class="col-lg-5">
+                    <h5><strong>Answers:</strong></h5>
+                    <br />
                     <p>On average most companionships were fed around two times per week by members of the ward in which they were currently serving.</p>
                 </div>
             </div>
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-                <p align="justify">Answer this question: @Html.TextBox("Question Textbox", "Write your answer here...")</p>
-
-                <input type="reset" value="Reply" />
-            }
-
         </div>
     }
     else
     {
 
     }
-
-
 }
-
 <br />
 <br />
 <div class="row">
     @using (Html.BeginForm())
     {
+        <div class="col-lg-2">
+
+        </div>
         <div class="col-lg-6">
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(false, "", new { @class = "text-danger" })
@@ -236,6 +236,9 @@
         <div class="col-lg-1">
             <input type="reset" value="Submit Question" class="btn btn-lg btn-success" style="margin-top: 10px;" />
         </div>
-        }
+        <div class="col-lg-3">
+
+        </div>
+    }
 </div>
         
