@@ -73,6 +73,7 @@ namespace Project1Git.Controllers
             return View(missionQuestion);
         }
 
+        [Authorize]
         public ActionResult NewMission()
         {
             return View();
