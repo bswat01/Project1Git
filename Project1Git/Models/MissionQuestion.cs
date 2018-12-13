@@ -12,7 +12,11 @@ namespace Project1Git.Models
     {
         [Key]
         public int missionquestionID { get; set; }
+
+        [Required]
         public virtual int missionID { get; set; }
+
+        [Required]
         public virtual int userID { get; set; }
 
         [Required]
