@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<Project1Git.Models.Mission>
 
+@{ 
+    ViewBag.Title = "Select Mission";
+}
+
 <h2>Select Mission to Ask Question</h2>
 
 <table class="table">
@@ -19,7 +23,9 @@
             @Html.DisplayFor(modelItem => item.missionName)
         </td>
         <td>
-            <button href=@Url.Action("AskQuestion", "Home", new { id = item.missionID }) class="btn btn-default">Click to Ask!</button>
+            <a href="@Url.Action("AskQuestion", "Home", new { id = item.missionID })">
+            <input type="button" value="Click to Ask!" class="btn btn-default" />
+            </a>
         </td>
     </tr>
         
@@ -30,7 +36,9 @@
 
 <p>
     Dont't see your mission?
-    <button href=@Url.Action("NewMission", "Home") class="btn btn-default">Add Mission</button>
+    <a href="@Url.Action("NewMission", "Home")">
+        <input type="button" value="Enter new Mission" class="btn btn-default" />
+    </a>
 </p>
 
 

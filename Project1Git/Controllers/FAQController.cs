@@ -35,14 +35,10 @@ namespace Project1Git.Controllers
         {
             if (mission.missionName != null)
             {
-
                 var ModelSwag = db.Database.SqlQuery<Mission>("SELECT * " +
                 "FROM Missions " +
                "WHERE Missions.MissionName =  '" + mission.missionName + "'").FirstOrDefault();
-
-
                 return View("Index", ModelSwag);
-
            }
             else
             {
@@ -50,6 +46,14 @@ namespace Project1Git.Controllers
             }
         }
 
-     
+        public ActionResult ViewQuestions(int? id)
+        {
+            var mq = db.Database.SqlQuery<MissionQuestion>("" +
+                "SELECT * FROM MissionQuestions" +
+                "WHERE missionID = " + id + "");
+
+            return View(mq);
+
+        }
     }
 }
