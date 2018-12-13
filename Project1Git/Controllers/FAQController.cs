@@ -46,6 +46,7 @@ namespace Project1Git.Controllers
             }
         }
 
+
         public ActionResult ViewQuestions(int? id)
         {
             IEnumerable<MissionQuestion> mq = db.Database.SqlQuery<MissionQuestion>("" +
