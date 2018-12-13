@@ -38,11 +38,20 @@
             </div>
 
         }
-        else if (Model.missionName == "Lyon")
+        else if (Model.missionName == "France Lyon")
         {
             <div class="col-lg-5">
                 <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
-                    <p style="margin-top: 15px;">@Html.Raw(ViewBag.France)</p>
+                    <p style="margin-top: 15px;">
+                        <ul>
+                            <li>Mission Name:@Html.DisplayFor(model => model.missionName)</li>
+                            <li>Mission President's Name: @Html.DisplayFor(model => model.missionPresidentName)</li>
+                            <li>Mission Address: @Html.DisplayFor(model => model.missionAddress)</li>
+                            <li>Mission Language: @Html.DisplayFor(model => model.Language)</li>
+                            <li>Mission Climate: @Html.DisplayFor(model => model.Climate)</li>
+                            <li>Mission Dominate Religion: @Html.DisplayFor(model => model.DominateReligion)</li>
+                        </ul>
+                    </p>
                 </div>
             </div>
             <div class="col-lg-1">
@@ -57,7 +66,16 @@
         {
             <div class="col-lg-5">
                 <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
-                    <p style="margin-top: 15px;">@Html.Raw(ViewBag.Canada)</p>
+                    <p style="margin-top: 15px;">
+                        <ul>
+                            <li>Mission Name:@Html.DisplayFor(model => model.missionName)</li>
+                            <li>Mission President's Name: @Html.DisplayFor(model => model.missionPresidentName)</li>
+                            <li>Mission Address: @Html.DisplayFor(model => model.missionAddress)</li>
+                            <li>Mission Language: @Html.DisplayFor(model => model.Language)</li>
+                            <li>Mission Climate: @Html.DisplayFor(model => model.Climate)</li>
+                            <li>Mission Dominate Religion: @Html.DisplayFor(model => model.DominateReligion)</li>
+                        </ul>
+                    </p>
                 </div>
             </div>
             <div class="col-lg-1">

@@ -49,6 +49,8 @@ namespace Project1Git.Controllers
                 ViewBag.CanadaFlag = Url.Content("~/Content/Images/Canada.png");
                 ViewBag.FranceFlag = Url.Content("~/Content/Images/France.png");
 
+
+
                 return View("Index", mission);
 
            }
@@ -62,7 +64,7 @@ namespace Project1Git.Controllers
         {
             ViewBag.Mission = db.Missions.ToList();
 
-            return View();
+           
         }
     }
 }
