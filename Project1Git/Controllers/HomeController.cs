@@ -84,6 +84,7 @@ namespace Project1Git.Controllers
                 "SELECT * FROM Users WHERE UserEmail = '" + email + "' AND password = '" + password + "'"
                 );
 
+           
             if (found.Count() > 0)
             {
                 FormsAuthentication.SetAuthCookie(email, rememberMe);

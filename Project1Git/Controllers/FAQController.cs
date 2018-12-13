@@ -22,17 +22,26 @@ namespace Project1Git.Controllers
             return View();
         }
 
+        public ActionResult Missions()
+        {
+            ViewBag.Mission = db.Missions.ToList();
+
+            return View();
+        }
+
         [HttpPost] 
         [Authorize]
         public ActionResult Missions(Mission mission)
         {
             if (mission.missionName != null)
             {
-                
+
+                var ModelSwag = db.Database.SqlQuery<Mission>("SELECT * " +
+                "FROM Missions " +
+               "WHERE Missions.Name =  '" + mission.missionName + "'");
 
 
-
-                return View("Index", mission);
+                return View("Index", ModelSwag);
 
            }
             else
@@ -41,11 +50,6 @@ namespace Project1Git.Controllers
             }
         }
 
-        public ActionResult Missions()
-        {
-            ViewBag.Mission = db.Missions.ToList();
-
-           
-        }
+     
     }
 }
