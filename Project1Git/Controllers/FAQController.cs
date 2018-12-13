@@ -21,7 +21,7 @@ namespace Project1Git.Controllers
         }
 
         [HttpPost]        
-        public ActionResult Missions(MissionName missionName)
+        public ActionResult Missions(Mission mission)
         {
             if (ModelState.IsValid)
             {
@@ -46,7 +46,8 @@ namespace Project1Git.Controllers
                 ViewBag.CaliforniaFlag = Url.Content("~/Content/Images/California.png");
                 ViewBag.CanadaFlag = Url.Content("~/Content/Images/Canada.png");
                 ViewBag.FranceFlag = Url.Content("~/Content/Images/France.png");
-                return View("Index", missionName);
+
+                return View("Index", mission);
 
            }
             else
@@ -57,6 +58,8 @@ namespace Project1Git.Controllers
 
         public ActionResult Missions()
         {
+            ViewBag.Mission = db.Missions.ToList();
+
             return View();
         }
     }

@@ -1,4 +1,4 @@
-﻿@model Project1Git.Models.MissionName
+﻿@model Project1Git.Models.Mission
 @{
     ViewBag.Title = "Missions";
 }
@@ -15,13 +15,8 @@
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-    @Html.DropDownListFor(x => x.Mission_Name, new[] {
-        new SelectListItem()
-            {Text = "California Long Beach", Value = "LongBeach"},
-        new SelectListItem()
-            {Text = "Canada Calgary", Value = "Calgary"},
-        new SelectListItem()
-            {Text = "France Lyon", Value = "Lyon"} }, "Select Mission:")
+    @Html.DropDownListFor(model => model.missionName, new SelectList(ViewBag.Mission, "missionID", "missionName"))
+        
 
     <input type="submit" value="Submit" />
 }

@@ -1,4 +1,5 @@
-﻿@model Project1Git.Models.Missions
+﻿@model Project1Git.Models.Mission
+@{
     ViewBag.Title = "Index";
 }
 
@@ -12,7 +13,7 @@
 </ul>
 <div class="row">
     @{
-        if (Model.missionName == "LongBeach")
+        if (Model.missionName == "California Long Beach")
         {
             <div class="col-lg-5">
                 <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
@@ -47,7 +48,7 @@
             </div>
 
         }
-        else if (Model.missionName == "Calgary")
+        else if (Model.missionName == "Canada Calgary")
         {
             <div class="col-lg-5">
                 <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
@@ -155,7 +156,7 @@
                         @Html.AntiForgeryToken()
                         @Html.ValidationSummary(false, "", new { @class = "text-danger" })
                         @Html.TextBox("Question Textbox", "Write your answer here...")
-                        <input type="reset" value="Reply" class="btn btn-sm btn-success"/>
+                        <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
                 </div>
                 <div class="col-lg-2">
@@ -245,4 +246,3 @@
         </div>
     }
 </div>
-        
