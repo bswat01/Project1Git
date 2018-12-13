@@ -1,4 +1,4 @@
-﻿@model Project1Git.Models.MissionName
+﻿@model Project1Git.Models.Mission
 @{
     ViewBag.Title = "Index";
 }
@@ -13,11 +13,16 @@
 </ul>
 <div class="row">
     @{
-        if (Model.Mission_Name == "LongBeach")
+        if (Model.missionName == "California Long Beach")
         {
             <div class="col-lg-5">
                 <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
-                    <p style="margin-top: 15px;">@Html.Raw(ViewBag.California)</p>
+                    <p style="margin-top: 15px;">
+                        <ul>
+                            <li>Mission Name: @Html.Display(Model.missionName)</li>
+                        </ul>
+
+                    </p>
                 </div>
             </div>
             <div class="col-lg-1">
@@ -28,7 +33,7 @@
             </div>
 
         }
-        else if (Model.Mission_Name == "Lyon")
+        else if (Model.missionName == "Lyon")
         {
             <div class="col-lg-5">
                 <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
@@ -43,7 +48,7 @@
             </div>
 
         }
-        else if (Model.Mission_Name == "Calgary")
+        else if (Model.missionName == "Canada Calgary")
         {
             <div class="col-lg-5">
                 <div class="container" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 250px;">
@@ -67,7 +72,7 @@
 <br />
 <br />
 @{
-    if (Model.Mission_Name == "LongBeach")
+    if (Model.missionName == "LongBeach")
     {
         <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
             <div class="row">
@@ -115,7 +120,7 @@
             </div>
         </div>
     }
-    else if (Model.Mission_Name == "Lyon")
+    else if (Model.missionName == "Lyon")
     {
         <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
             <div class="row">
@@ -151,7 +156,7 @@
                         @Html.AntiForgeryToken()
                         @Html.ValidationSummary(false, "", new { @class = "text-danger" })
                         @Html.TextBox("Question Textbox", "Write your answer here...")
-                        <input type="reset" value="Reply" class="btn btn-sm btn-success"/>
+                        <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
                 </div>
                 <div class="col-lg-2">
@@ -167,7 +172,7 @@
 
         </div>
     }
-    else if (Model.Mission_Name == "Calgary")
+    else if (Model.missionName == "Calgary")
     {
         <div class="container ContentCenter" style="border-style: solid; border-width: 5px; border-radius: 25px; height: 175px;">
             <div class="row">
@@ -241,4 +246,3 @@
         </div>
     }
 </div>
-        
