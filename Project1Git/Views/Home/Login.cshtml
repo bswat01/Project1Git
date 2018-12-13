@@ -39,12 +39,15 @@
         </div>
         <hr />
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-1">
-                <input type="submit" value="Login" class="btn btn-default"  />
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-default" />
                 <br /><br />
-            </div>
-            <div>
-                <p>Don't have an account? <button href="@Url.Action("signUp", "Users")" class="btn btn-default">Sign Up!</button></p>
+                    <p>
+                        Don't have an account?
+                    </p>
+                    <a href="@Url.Action("signUp", "Users")">
+                        <input type="button" value="Sign Up!" class="btn btn-default" />
+                    </a>
             </div>
         </div>
     </div>
