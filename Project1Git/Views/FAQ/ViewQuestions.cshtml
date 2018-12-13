@@ -29,7 +29,10 @@
                 @Html.DisplayFor(modelItem => item.answer)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", "MissionQuestions", new { id = item.missionquestionID }) 
+           
+                <a href="@Url.Action("Edit", "MissionQuestions", new { id = item.missionquestionID })">
+                    <input type="button" value="Edit" class="btn btn-default" />
+                </a>
             </td>
         </tr>
     }
