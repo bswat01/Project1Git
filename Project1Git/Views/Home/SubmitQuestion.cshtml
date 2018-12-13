@@ -19,7 +19,7 @@
             @Html.DisplayFor(modelItem => item.missionName)
         </td>
         <td>
-            @Html.ActionLink("Click to Ask!", "AskQuestion", new { id = item.missionID })
+            <button href=@Url.Action("AskQuestion", "Home", new { id = item.missionID }) class="btn btn-default">Click to Ask!</button>
         </td>
     </tr>
         
@@ -30,7 +30,7 @@
 
 <p>
     Dont't see your mission?
-    @Html.ActionLink("Add New Mission", "NewMission")
+    <button href=@Url.Action("NewMission", "Home") class="btn btn-default">Add Mission</button>
 </p>
 
 
