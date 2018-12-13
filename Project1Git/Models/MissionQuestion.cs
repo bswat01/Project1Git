@@ -14,7 +14,13 @@ namespace Project1Git.Models
         public int missionquestionID { get; set; }
         public virtual int missionID { get; set; }
         public virtual int userID { get; set; }
+
+        [Required]
+        [Display(Name = "Question")]
         public string question { get; set; }
+
+        [Required]
+        [Display(Name = "Answer")]
         public string answer { get; set; }
 
         public virtual Mission Missions { get; set; }
