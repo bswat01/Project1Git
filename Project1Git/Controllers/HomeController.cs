@@ -79,6 +79,20 @@ namespace Project1Git.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult NewMission([Bind(Include = "missionID,missionName,missionPresidentName,missionAddress,Language,Climate,DominateReligion,Flag")] Mission mission)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Missions.Add(mission);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(mission);
+        }
+
         public ActionResult signUp()
         {
             //add ability to create account record in database with view
