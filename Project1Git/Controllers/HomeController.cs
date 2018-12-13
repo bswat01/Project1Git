@@ -37,18 +37,40 @@ namespace Project1Git.Controllers
             return View(db.Missions.ToList());
         }
 
+        [Authorize]
+        [HttpGet]
         public ActionResult AskQuestion(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Mission mission = db.Missions.Find(id);
-            if (mission == null)
+            var found = db.Database.SqlQuery<MissionQuestion>("SELECT *FROM MissionQuestions WHERE missionID = " + id + "").FirstOrDefault();
+
+            if (found == null)
             {
                 return HttpNotFound();
             }
-            return View(mission);
+            return View(found);
+        }
+        [HttpPost]
+        public ActionResult AskQuestions(MissionQuestion missionQuestion)
+        {
+            int user = db.Database.SqlQuery<int>("" +
+                "SELECT * FROM Users" +
+                "WHERE Users.userEmail = " + User.Identity.Name).FirstOrDefault();
+            missionQuestion.userID = user;
+            if (ModelState.IsValid)
+            {
+                db.MissionQuestions.Add(missionQuestion);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            
+
+            ViewBag.missionID = new SelectList(db.Missions, "missionID", "missionName", missionQuestion.missionID);
+            ViewBag.userID = new SelectList(db.Users, "userID", "userEmail", missionQuestion.userID);
+            return View(missionQuestion);
         }
 
         public ActionResult NewMission()
