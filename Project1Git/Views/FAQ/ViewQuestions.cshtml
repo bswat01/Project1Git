@@ -3,19 +3,13 @@
     ViewBag.Title = "ViewQuestions";
 }
 
-<h2>ViewQuestions</h2>
+<h2>View Questions</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Missions.missionName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Users.userEmail)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.question)
         </th>
@@ -29,21 +23,13 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Missions.missionName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Users.userEmail)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.question)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.answer)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.missionquestionID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.missionquestionID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.missionquestionID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.missionquestionID }) 
             </td>
         </tr>
     }

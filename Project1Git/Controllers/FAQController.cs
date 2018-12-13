@@ -48,9 +48,8 @@ namespace Project1Git.Controllers
 
         public ActionResult ViewQuestions(int? id)
         {
-            var mq = db.Database.SqlQuery<MissionQuestion>("" +
-                "SELECT * FROM MissionQuestions" +
-                "WHERE missionID = " + id + "");
+            IEnumerable<MissionQuestion> mq = db.Database.SqlQuery<MissionQuestion>("" +
+                "SELECT * FROM MissionQuestions WHERE missionID = " + id + "");
 
             return View(mq);
 
