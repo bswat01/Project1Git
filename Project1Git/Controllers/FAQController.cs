@@ -45,7 +45,7 @@ namespace Project1Git.Controllers
         {
             ViewBag.Mission = db.Missions.ToList();
 
-           
+            return View();
         }
     }
 }
