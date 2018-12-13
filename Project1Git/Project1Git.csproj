@@ -183,6 +183,7 @@
     <Content Include="Views\Home\AskQuestion.cshtml" />
     <Content Include="Views\Users\signUp.cshtml" />
     <Content Include="Views\Home\NewMission.cshtml" />
+    <Content Include="Views\FAQ\ViewQuestions.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
