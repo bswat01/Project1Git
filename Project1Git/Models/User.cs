@@ -12,9 +12,21 @@ namespace Project1Git.Models
     {
         [Key]
         public int userID { get; set; }
+
+        [Required]
+        [Display(Name = "Email")]
         public string userEmail { get; set; }
+
+        [Required]
+        [Display(Name = "Password")]
         public string password { get; set; }
+
+        [Required]
+        [Display(Name = "First Name")]
         public string firstname { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
         public string lastname { get; set; }
     }
 }
