@@ -22,32 +22,13 @@ namespace Project1Git.Controllers
             return View();
         }
 
-        [HttpPost]        
+        [HttpPost] 
+        [Authorize]
         public ActionResult Missions(Mission mission)
         {
-            if (ModelState.IsValid)
+            if (mission.missionName != null)
             {
-                ViewBag.California = "Mission name: California Long Beach <br>" +
-                    "Mission President's Name: Brian P. Patterson <br>" +
-                    "Mission Address: 6500 E Atherton St, Long Beach, Ca, 90815 <br>" +
-                    "Mission Language: English <br>" +
-                    "Mission Climate: Mediterranean <br>" +
-                    "Mission Dominate Religion: Christian <br>";
-                ViewBag.Canada = "Mission name: Canada Calgary <br>" +
-                    "Mission President's Name: Stephen A. Keung <br>" +
-                    "Mission Address: 7044 Farrell Rd SE, Calgary, AB T2H 0T2, Canada <br>" +
-                    "Mission Language: English <br>" +
-                    "Mission Climate: Humid Continental <br>" +
-                    "Mission Dominate Religion: Christian <br>";
-                ViewBag.France = "Mission name: France Lyon <br>" +
-                    "Mission President's Name: Christophe Gérard Giraud-Carrier <br>" +
-                    "Mission Address: Lyon Business Centre, 59 rue de l’Abondance, 69003 Lyon, France <br>" +
-                    "Mission Language: French <br>" +
-                    "Mission Climate: Humid Sub-tropical <br>" +
-                    "Mission Dominate Religion: Christian <br>";
-                ViewBag.CaliforniaFlag = Url.Content("~/Content/Images/California.png");
-                ViewBag.CanadaFlag = Url.Content("~/Content/Images/Canada.png");
-                ViewBag.FranceFlag = Url.Content("~/Content/Images/France.png");
+                
 
 
 

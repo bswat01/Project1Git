@@ -80,7 +80,11 @@ namespace Project1Git.Controllers
             string email = login.Username;
             string password = login.Password;
 
-            if (string.Equals(email, "greg@test.com") && (string.Equals(password, "greg")))
+            var found = db.Database.SqlQuery<User>("" +
+                "SELECT * FROM Users WHERE UserEmail = '" + email + "' AND password = '" + password + "'"
+                );
+
+            if (found.Count() > 0)
             {
                 FormsAuthentication.SetAuthCookie(email, rememberMe);
 

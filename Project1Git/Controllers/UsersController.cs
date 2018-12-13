@@ -116,6 +116,25 @@ namespace Project1Git.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult signUp()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult signUp([Bind(Include = "userID,userEmail,password,firstname,lastname")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Users.Add(user);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(user);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
