@@ -8,7 +8,7 @@ using System.Web;
 namespace Project1Git.Models
 {
     [Table("Missions")]
-    public class Missions
+    public class Mission
     {
         [Key]
         public int missionID { get; set; }

@@ -1,4 +1,5 @@
-﻿using Project1Git.Models;
+﻿using Project1Git.DAL;
+using Project1Git.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,12 @@ using System.Web.Security;
 
 namespace Project1Git.Controllers
 {
+    //[Authorize] Wait until I get this working :)
     public class FAQController : Controller
     {
         // GET: FAQ
-        
+        private ContextMissionary db = new ContextMissionary();
+
         public ActionResult Index()
         {
             return View();
