@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Project1Git.Models.Mission>
+
+<h2>Select Mission to Ask Question</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.missionName)
+        </th>
+        <th>
+            Ask Question
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionName)
+        </td>
+        <td>
+            @Html.ActionLink("Click to Ask!", "AskQuestion", new { id = item.missionID })
+        </td>
+    </tr>
+        
+    }
+
+</table>
+
+
+<p>
+    Dont't see your mission?
+    @Html.ActionLink("Add New Mission", "NewMission")
+</p>
+
+

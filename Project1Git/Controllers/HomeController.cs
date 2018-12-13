@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -12,9 +15,6 @@ namespace Project1Git.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        //JAXON KNOWS HOW TO USE GIT!!!
-        //KEN TRIED
-        //comment
         private ContextMissionary db = new ContextMissionary();
 
         public ActionResult Index()
@@ -28,6 +28,30 @@ namespace Project1Git.Controllers
         }
 
         public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult SubmitQuestion()
+        {
+            return View(db.Missions.ToList());
+        }
+
+        public ActionResult AskQuestion(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Mission mission = db.Missions.Find(id);
+            if (mission == null)
+            {
+                return HttpNotFound();
+            }
+            return View(mission);
+        }
+
+        public ActionResult NewMission()
         {
             return View();
         }
