@@ -16,7 +16,7 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(false, "", new { @class = "text-danger" })
     @Html.DropDownListFor(model => model.missionName, new SelectList(ViewBag.Mission, "missionName", "missionName"))
-
+        
 
     <input type="submit" value="Submit" />
 }
