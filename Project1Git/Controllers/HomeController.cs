@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using Project1Git.DAL;
 using Project1Git.Models;
 
 namespace Project1Git.Controllers
@@ -14,8 +15,8 @@ namespace Project1Git.Controllers
         //JAXON KNOWS HOW TO USE GIT!!!
         //KEN TRIED
         //comment
+        private ContextMissionary db = new ContextMissionary();
 
-        
         public ActionResult Index()
         {
             return View(); 
@@ -46,13 +47,27 @@ namespace Project1Git.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(FormCollection form, bool rememberMe = false)
+        public ActionResult Login(Login login, bool rememberMe = false)
         {
-                //login authentication from login view
-                //authentication already added to web.config
-                //should return to login view if not authenticated from any view
+            //login authentication from login view
+            //authentication already added to Web.config
+            //should return to login view if not authenticated from any view
+
+            string email = login.Username;
+            string password = login.Password;
+
+            if (string.Equals(email, "greg@test.com") && (string.Equals(password, "greg")))
+            {
+                FormsAuthentication.SetAuthCookie(email, rememberMe);
+
+                return RedirectToAction("Index", "Home");
+
+            }
+            else
+            {
                 return View();
-            
+            }
+
         }
     }
 }
