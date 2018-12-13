@@ -11,7 +11,7 @@ using Project1Git.Models;
 
 namespace Project1Git.Controllers
 {
-    //[Authorize] Wait until I get this working :)
+
     public class FAQController : Controller
     {
         // GET: FAQ
