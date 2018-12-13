@@ -36,6 +36,8 @@ namespace Project1Git.Models
         [Display(Name = "Mission's Dominate Religion")]
         public string DominateReligion { get; set; }
 
+        [Required]
+        [Display(Name = "Mission Flag ")]
         public string Flag { get; set; }
     }
 }
