@@ -34,7 +34,7 @@
 
             </div>
             <div class="col-lg-6">
-                <img src="@ViewBag.CaliforniaFlag" class="center" style="width: 80%; border-radius: 25px; height: 250px;" />
+                <img src="~/Content/Images/California.png" class="center" style="width: 80%; border-radius: 25px; height: 250px;" />
             </div>
 
         }
@@ -103,8 +103,6 @@
                     <h5><strong>What is something most missionaries wish they had brought with them?</strong></h5>
                     @using (Html.BeginForm())
                     {
-                        @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
                         @Html.TextBox("Question Textbox", "Write your answer here...")
                         <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
@@ -126,9 +124,8 @@
                     <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
                     @using (Html.BeginForm())
                     {
-                        @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-                        @Html.TextBox("Question Textbox", "Write your answer here...")
+                      
+                      @Html.TextBox("Question Textbox", "Write your answer here...")
                         <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
                 </div>
@@ -151,8 +148,7 @@
                     <h5><strong>What is something most missionaries wish they had brought with them?</strong></h5>
                     @using (Html.BeginForm())
                     {
-                        @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                     
                         @Html.TextBox("Question Textbox", "Write your answer here...")
                         <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
@@ -176,8 +172,7 @@
                     <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
                     @using (Html.BeginForm())
                     {
-                        @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                      
                         @Html.TextBox("Question Textbox", "Write your answer here...")
                         <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
@@ -203,8 +198,7 @@
                     <h5><strong>What is something most missionaries wish they had brought with them?</strong></h5>
                     @using (Html.BeginForm())
                     {
-                        @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                      
                         @Html.TextBox("Question Textbox", "Write your answer here...")
                         <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
@@ -226,8 +220,7 @@
                     <h5><strong>How many meals were typically provided from members as opposed to missionaries buying their own food?</strong></h5>
                     @using (Html.BeginForm())
                     {
-                        @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                     
                         @Html.TextBox("Question Textbox", "Write your answer here...")
                         <input type="reset" value="Reply" class="btn btn-sm btn-success" />
                     }
@@ -257,8 +250,7 @@
 
         </div>
         <div class="col-lg-6">
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        
             <p align="justify"><strong>Ask your own question:</strong> @Html.TextBox("Question Textbox", "Write your question here...")</p>
         </div>
         <div class="col-lg-1">
