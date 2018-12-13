@@ -12,11 +12,11 @@
 </head>
 <body>
     <style>
-        body{
+        body {
             background-color: cadetblue;
         }
     </style>
-    <div class="navbar navbar-inverse navbar-fixed-top"style="background-color: #f7e6ff">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #f7e6ff">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,7 +46,7 @@
         @RenderBody()
         <hr />
         <footer>
-  
+
             <p style="text-align:center;">&copy; @DateTime.Now.Year - The Church of Jesus Christ of Latter-Day Saints</p>
 
         </footer>
@@ -56,3 +56,19 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
+<!--
+
+2. Create a login page which allows a user to login with an email address and password. 
+    This view will also have a link that will allow them to create a new account/user. 
+    Once that account is created they are automatically logged in. 
+    You will not have to worry about maintaining the account once it is created. 
+    You will use a lookup(find) to the User table to authenticate the user.
+
+3. Add authentication rules to implement the following logic:
+    The user must be logged in to view the FAQ page.  
+    If an unauthorized user tries to access the FAQ page redirect them to the Login page. 
+    Users that are not authenticated can still see the mission view, they just can't get to the FAQ view to review questions and add questions
+
+4. Once in the FAQ page, add functionality so the user can post a question or reply to a question.  These should be saved to the MissionQuestions table. Once the question is posted, the question cannot be deleted or edited. However, the answer can be changed over and over again (similar to a wiki) by any authorized user. You will store the latest answer inputted (there is only 1 answer per question).
+
+5. Schedule a time to meet with TAs for grading.-->
