@@ -38,7 +38,7 @@ namespace Project1Git.Controllers
 
                 var ModelSwag = db.Database.SqlQuery<Mission>("SELECT * " +
                 "FROM Missions " +
-               "WHERE Missions.Name =  '" + mission.missionName + "'");
+               "WHERE Missions.MissionName =  '" + mission.missionName + "'").FirstOrDefault();
 
 
                 return View("Index", ModelSwag);
