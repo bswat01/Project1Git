@@ -4,18 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Project1Git.Controllers
 {
     public class FAQController : Controller
     {
         // GET: FAQ
+        
         public ActionResult Index()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost]        
         public ActionResult Missions(MissionName missionName)
         {
             if (ModelState.IsValid)
