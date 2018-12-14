@@ -6,6 +6,14 @@
 
 <h2>Ask Question</h2>
 
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>Ask a Question</li>
+    <li>
+       
+    </li>
+</ul>
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
