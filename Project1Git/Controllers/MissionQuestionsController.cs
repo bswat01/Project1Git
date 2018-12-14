@@ -94,9 +94,16 @@ namespace Project1Git.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.missionID = new SelectList(db.Missions, "missionID", "missionName", missionQuestion.missionID);
-            ViewBag.userID = new SelectList(db.Users, "userID", "userEmail", missionQuestion.userID);
-            return View(missionQuestion);
+            db.Database.ExecuteSqlCommand("" +
+                "UPDATE MissionQuestions " +
+                "SET answer = '" + missionQuestion.answer + "'" +
+                "WHERE missionID = " + missionQuestion.missionID + "" +
+                "AND missionquestionID = " + missionQuestion.missionquestionID + "");
+            return RedirectToAction("ViewQuestions", "FAQ", new {id = missionQuestion.missionID });
+
+            //ViewBag.missionID = new SelectList(db.Missions, "missionID", "missionName", missionQuestion.missionID);
+            //ViewBag.userID = new SelectList(db.Users, "userID", "userEmail", missionQuestion.userID);
+            //return View(missionQuestion);
         }
 
         // GET: MissionQuestions/Delete/5
