@@ -5,7 +5,13 @@
 }
 
 <h2>Sign Up</h2>
-
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Login", "Login", "Home")</li>
+    <li>
+        Sign Up
+    </li>
+</ul>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
