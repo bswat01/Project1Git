@@ -57,7 +57,9 @@ namespace Project1Git.Controllers
             {
                 db.MissionQuestions.Add(missionQuestion);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                Mission missions = db.Missions.Find(missionQuestion.missionID);
+
+                return RedirectToAction("Missions", "FAQ", new {id = missions.missionID });
             }
             int user = db.Database.SqlQuery<int>("" +
                 "SELECT * FROM Users" +

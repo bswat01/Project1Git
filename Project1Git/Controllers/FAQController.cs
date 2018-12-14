@@ -22,12 +22,20 @@ namespace Project1Git.Controllers
             return View();
         }
 
-        public ActionResult Missions()
+        public ActionResult Missions(int? id)
         {
-            ViewBag.Mission = db.Missions.ToList();
+            if (id != null)
+            {
+                var ModelSwag = db.Database.SqlQuery<Mission>("SELECT * " +
+                "FROM Missions " +
+               "WHERE Missions.missionID =  '" + id + "'").FirstOrDefault();
+                return View("Index", ModelSwag);
+            }
 
+            ViewBag.Mission = db.Missions.ToList();
             return View();
         }
+
 
         [HttpPost] 
         [Authorize]
