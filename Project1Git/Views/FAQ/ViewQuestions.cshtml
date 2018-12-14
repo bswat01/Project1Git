@@ -4,7 +4,15 @@
 }
 
 <h2>View Questions</h2>
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Missions", "Missions", "FAQ")</li>
+    <li>@Html.ActionLink("Frequently Asked Questions", "Missions", "FAQ")</li>
 
+    <li>
+        View Questions
+    </li>
+</ul>
 <p>
     @Html.ActionLink("Ask your own", "Create", "MissionQuestions", null, new { @class = "btn btn-default" })
 </p>
