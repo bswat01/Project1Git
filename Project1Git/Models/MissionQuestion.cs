@@ -23,7 +23,7 @@ namespace Project1Git.Models
         [Display(Name = "Question")]
         public string question { get; set; }
 
-        [Required]
+        
         [Display(Name = "Answer")]
         public string answer { get; set; }
 

@@ -1,10 +1,21 @@
 ﻿@model Project1Git.Models.MissionQuestion
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Add Question";
 }
 
-<h2>Create</h2>
+<h2 style="text-align:center;">Add Question</h2>
+
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Missions", "Missions", "FAQ")</li>
+    <li>@Html.ActionLink("Frequently Asked Questions", "Index", "FAQ")</li>
+    <li>@Html.ActionLink("View Questions", "ViewQuestions", "FAQ", null, null)</li>
+
+    <li>
+        Add Question
+    </li>
+</ul>
 
 @using (Html.BeginForm()) 
 {
@@ -23,26 +34,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.userID, "User Email", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("userID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.userID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.question, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.question, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.question, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.answer, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.answer, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.answer, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -53,7 +48,3 @@
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

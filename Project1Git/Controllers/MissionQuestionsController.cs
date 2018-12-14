@@ -38,6 +38,7 @@ namespace Project1Git.Controllers
         }
 
         // GET: MissionQuestions/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.missionID = new SelectList(db.Missions, "missionID", "missionName");
@@ -58,10 +59,19 @@ namespace Project1Git.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            int user = db.Database.SqlQuery<int>("" +
+                "SELECT * FROM Users" +
+                "WHERE Users.userEmail = " + User.Identity.Name).FirstOrDefault();
 
-            ViewBag.missionID = new SelectList(db.Missions, "missionID", "missionName", missionQuestion.missionID);
-            ViewBag.userID = new SelectList(db.Users, "userID", "userEmail", missionQuestion.userID);
-            return View(missionQuestion);
+            db.Database.ExecuteSqlCommand("" +
+                "INSERT INTO MissionQuestions (missionID, userID, question) " +
+                "VALUES(" + missionQuestion.missionID + ", " + user + ", '" + missionQuestion.question + "')" +
+                "" +
+                "");
+            return RedirectToAction("Index");
+            //ViewBag.missionID = new SelectList(db.Missions, "missionID", "missionName", missionQuestion.missionID);
+            //ViewBag.userID = new SelectList(db.Users, "userID", "userEmail", missionQuestion.userID);
+            //return View(missionQuestion);
         }
 
         // GET: MissionQuestions/Edit/5

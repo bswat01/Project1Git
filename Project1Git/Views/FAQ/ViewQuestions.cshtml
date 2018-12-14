@@ -1,20 +1,21 @@
 ﻿@model IEnumerable<Project1Git.Models.MissionQuestion>
 @{
     ViewBag.Title = "ViewQuestions";
+
 }
 
-<h2>View Questions</h2>
+<h2 style="text-align:center;">View Questions</h2>
 <ul class="breadcrumb">
     <li>@Html.ActionLink("Home", "Index", "Home")</li>
     <li>@Html.ActionLink("Missions", "Missions", "FAQ")</li>
-    <li>@Html.ActionLink("Frequently Asked Questions", "Missions", "FAQ")</li>
+    <li>@Html.ActionLink("Frequently Asked Questions", "Index", "FAQ")</li>
 
     <li>
         View Questions
     </li>
 </ul>
 <p>
-    @Html.ActionLink("Ask your own", "Create", "MissionQuestions", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Ask your own", "Create", "MissionQuestions", null , new { @class = "btn btn-default" })
 </p>
 <table class="table">
     <tr>

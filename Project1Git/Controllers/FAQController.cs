@@ -46,7 +46,7 @@ namespace Project1Git.Controllers
             }
         }
 
-
+        [Authorize]
         public ActionResult ViewQuestions(int? id)
         {
             IEnumerable<MissionQuestion> mq = db.Database.SqlQuery<MissionQuestion>("" +

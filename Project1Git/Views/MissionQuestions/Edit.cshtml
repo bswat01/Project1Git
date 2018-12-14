@@ -1,10 +1,20 @@
 ﻿@model Project1Git.Models.MissionQuestion
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Answer";
 }
 
 <h2>Edit Answer</h2>
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Missions", "Missions", "FAQ")</li>
+    <li>@Html.ActionLink("Frequently Asked Questions", "Missions", "FAQ")</li>
+    <li>@Html.ActionLink("View Questions", "ViewQuestions", "FAQ", new { id = Model.missionID }, null)</li>
+
+    <li>
+        Edit Answer
+    </li>
+</ul>
 
 @using (Html.BeginForm())
 {
